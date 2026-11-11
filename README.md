@@ -6,6 +6,12 @@
 
 > 项目仓库：https://github.com/xulie66/ai-comic 。下方命令可直接复制执行。
 
+推荐生图API：https://oiai.pro
+香港G口大带宽，1分钱一张，速度快
+
+推荐文本中转：chat-chat.site
+自建号池，企业运营稳定性拉满，保真不掺水
+
 ## 上传 GitHub 时保留的目录
 
 ```text
