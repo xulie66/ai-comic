@@ -1,0 +1,27 @@
+{
+  "name": "ai-comic-ui",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AI 漫画 · 新前端（Vue3 + Vite + Element Plus），对接现有 Node 后端 /api",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:admin": "vite build --config vite.admin.config.ts && node scripts/fix-admin-html.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "element-plus": "^2.9.1",
+    "pinia": "^2.3.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "vue-demi"]
+  }
+}
