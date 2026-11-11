@@ -1,0 +1,50 @@
+name: comic-go
+services:
+  postgres:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: comic
+      POSTGRES_USER: comic
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a unique POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U comic -d comic"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    # Deliberately no host port: only the application network can reach PG.
+  app:
+    build:
+      context: ..
+      dockerfile: go-service/deploy/Dockerfile
+      args:
+        GO_VERSION: "1.27"
+    image: comic-go:local
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      TZ: ${TZ:-Asia/Shanghai}
+      GO_SERVICE_ADDR: 0.0.0.0:5210
+      GO_SERVICE_DATA_ROOT: /app/data
+      GO_SERVICE_PUBLIC_DIR: /app/public
+      GO_SERVICE_DATABASE_URL: ${GO_SERVICE_DATABASE_URL:?Set encoded PG URL in .env}
+      GO_SERVICE_SECURE_COOKIES: ${GO_SERVICE_SECURE_COOKIES:-false}
+      GO_SERVICE_MAX_BODY_BYTES: ${GO_SERVICE_MAX_BODY_BYTES:-16777216}
+      # Read only by the explicit one-shot -bootstrap-admin command.
+      GO_SERVICE_ADMIN_USERNAME: ${GO_SERVICE_ADMIN_USERNAME:-}
+      GO_SERVICE_ADMIN_PASSWORD: ${GO_SERVICE_ADMIN_PASSWORD:-}
+    ports:
+      - "${COMIC_BIND_IP:-127.0.0.1}:5210:5210"
+    volumes:
+      - comic-data:/app/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    stop_grace_period: 40s
+volumes:
+  postgres-data:
+  comic-data:

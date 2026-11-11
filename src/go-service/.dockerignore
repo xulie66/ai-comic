@@ -1,0 +1,13 @@
+# Only applies if go-service itself is the build context; the main image needs src.
+# For src context use -f go-service/deploy/Dockerfile and its adjacent ignore file.
+**/node_modules
+**/.git
+**/.env
+**/.env.*
+!**/.env.example
+**/data
+**/logs
+**/backups
+**/dist
+**/*.exe
+**/*.test

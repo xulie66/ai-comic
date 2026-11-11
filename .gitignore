@@ -1,0 +1,32 @@
+# Dependencies and build output
+node_modules/
+dist/
+bin/
+coverage/
+*.exe
+*.test
+comic-server
+comic-migrate
+*-linux-amd64
+src/web/public/ui/
+src/web/public/admin/
+
+# Local configuration and private data
+.env
+.env.*
+!.env.example
+data/
+logs/
+backups/
+*.log
+*.dump
+*.sqlite*
+*.db
+*.pem
+*.key
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

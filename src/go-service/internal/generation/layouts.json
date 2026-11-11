@@ -1,0 +1,130 @@
+[
+  {
+    "id": "vertical_three",
+    "name": "纵向三格",
+    "aspectRatios": ["9:16", "4:5"],
+    "panelCount": 3,
+    "sizes": ["中格", "中格", "中格"],
+    "description": "三格从上到下阅读，适合事件推进、对话递进、情绪反应。"
+  },
+  {
+    "id": "vertical_four",
+    "name": "纵向四格",
+    "aspectRatios": ["9:16"],
+    "panelCount": 4,
+    "sizes": ["中格", "中格", "中格", "中格"],
+    "description": "四格纵向连续推进，适合信息量较多但仍按顺序阅读的剧情。"
+  },
+  {
+    "id": "top_large_bottom_two",
+    "name": "上大下双格",
+    "aspectRatios": ["9:16", "3:4", "4:5"],
+    "panelCount": 3,
+    "sizes": ["大格", "小格", "小格"],
+    "description": "顶部大格交代主画面，底部双格放动作结果、反应或道具特写。"
+  },
+  {
+    "id": "top_two_bottom_large",
+    "name": "上双格下大格",
+    "aspectRatios": ["3:4", "4:5"],
+    "panelCount": 3,
+    "sizes": ["小格", "小格", "大格"],
+    "description": "顶部双格铺垫信息或对话，下方大格承接爆点、反转或情绪落点。"
+  },
+  {
+    "id": "four_grid",
+    "name": "四宫格",
+    "aspectRatios": ["3:4", "1:1"],
+    "panelCount": 4,
+    "sizes": ["小格", "小格", "小格", "小格"],
+    "description": "二乘二均衡布局，适合多人反应、并列信息、连续动作。"
+  },
+  {
+    "id": "l_shape",
+    "name": "L 型布局",
+    "aspectRatios": ["3:4"],
+    "panelCount": 3,
+    "sizes": ["大格", "竖长格", "小格"],
+    "description": "一个主画面配两个边角辅助格，适合场景建立加人物反应。"
+  },
+  {
+    "id": "side_by_side",
+    "name": "左右分栏",
+    "aspectRatios": ["3:4", "1:1"],
+    "panelCount": 2,
+    "sizes": ["竖长格", "竖长格"],
+    "description": "左右两栏对照，适合两人对峙、异地并行、关系张力。"
+  },
+  {
+    "id": "diagonal_split",
+    "name": "斜切分镜",
+    "aspectRatios": ["3:4", "4:5"],
+    "panelCount": 3,
+    "sizes": ["中格", "中格", "中格"],
+    "description": "斜线切分增强冲突感，适合争执、追逐、突然转折。"
+  },
+  {
+    "id": "strip_shot",
+    "name": "长条镜头",
+    "aspectRatios": ["9:16", "4:5"],
+    "panelCount": 1,
+    "sizes": ["横长格"],
+    "description": "单个长条画面，适合环境、沉默、距离感或一条重要信息。"
+  },
+  {
+    "id": "panorama_plus_closeup",
+    "name": "全景 + 特写",
+    "aspectRatios": ["3:4", "4:5"],
+    "panelCount": 2,
+    "sizes": ["大格", "特写格"],
+    "description": "先给全景建立关系，再给人物脸部、眼神或道具特写。"
+  },
+  {
+    "id": "strip_panorama_plus_closeup",
+    "name": "长条全景 + 特写",
+    "aspectRatios": ["9:16", "4:5"],
+    "panelCount": 3,
+    "sizes": ["横长格", "小格", "特写格"],
+    "description": "长条全景铺开环境，后续小格承接表情、手机或关键道具。"
+  },
+  {
+    "id": "center_focus",
+    "name": "中间突出式",
+    "aspectRatios": ["3:4", "4:5"],
+    "panelCount": 3,
+    "sizes": ["小格", "大格", "小格"],
+    "description": "中间大格突出核心动作或情绪，前后小格做铺垫与余韵。"
+  },
+  {
+    "id": "full_page_large",
+    "name": "全屏大图",
+    "aspectRatios": ["9:16", "3:4", "4:5", "1:1"],
+    "panelCount": 1,
+    "sizes": ["大格"],
+    "description": "整页单张大画面，适合人物登场、场景建立、强情绪爆点。"
+  },
+  {
+    "id": "breaking_frame",
+    "name": "破框 / 延伸镜头",
+    "aspectRatios": ["9:16", "4:5"],
+    "panelCount": 3,
+    "sizes": ["大格", "小格", "小格"],
+    "description": "主体人物或动作可跨出格线，适合拥抱、推开、坠落、冲撞等强动作。"
+  },
+  {
+    "id": "dialogue_side_by_side",
+    "name": "左右分栏（对话强化版）",
+    "aspectRatios": ["3:4", "1:1"],
+    "panelCount": 2,
+    "sizes": ["竖长格", "竖长格"],
+    "description": "左右对话位更清晰，气泡分别靠近说话人，适合谈判、分手、摊牌。"
+  },
+  {
+    "id": "dynamic_diagonal_split",
+    "name": "斜切分镜（动感强化版）",
+    "aspectRatios": ["9:16", "3:4"],
+    "panelCount": 4,
+    "sizes": ["中格", "中格", "小格", "特写格"],
+    "description": "多段斜切和速度感构图，适合打斗、奔跑、争吵升级和撞击。"
+  }
+]

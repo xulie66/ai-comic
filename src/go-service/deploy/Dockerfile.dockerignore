@@ -1,0 +1,18 @@
+# Dockerfile-specific ignore: paths relative to the src context.
+**
+!ui/
+!ui/**
+!go-service/
+!go-service/**
+**/node_modules
+**/.git
+**/.env
+**/.env.*
+**/data
+**/logs
+**/backups
+**/dist
+**/*.exe
+**/*.test
+**/bin
+**/coverage*
